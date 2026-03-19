@@ -1,21 +1,9 @@
 const services = [
   {
-    title: 'Agile Transformation',
-    description:
-      "Most teams don't fail because they lack talent. They fail because their processes can't keep up. We guide organizations through the messy, real work of becoming adaptive - from rituals to culture.",
-    icon: 'triangle',
-  },
-  {
     title: 'Innovation Conceptualization',
     description:
       "A bold idea that never gets tested is just a risk you're carrying. We translate raw innovation into structured concepts that reduce adoption risk before a single line of code is written.",
     icon: 'square',
-  },
-  {
-    title: 'Innovation Project Continuity',
-    description:
-      "You ran a funded project. It worked. Now what? We maintain and operate the outcomes of Innosuisse and similar programs for companies that don't have an IT setup to take it further.",
-    icon: 'bars',
   },
   {
     title: 'Rapid Prototyping',
@@ -26,14 +14,26 @@ const services = [
   {
     title: 'Data-Driven Insights',
     description:
-      "The data your business generates every day is already telling you what to fix. We extract the signal from the noise and turn it into decisions you can act on.",
+      'We design decision systems around your operational and product data. From instrumentation to dashboards and forecasting, we turn fragmented signals into clear next actions teams can execute immediately.',
     icon: 'dots',
+  },
+  {
+    title: 'Agile Transformation',
+    description:
+      "Most teams don't fail because they lack talent. They fail because their processes can't keep up. We guide organizations through the messy, real work of becoming adaptive - from rituals to culture.",
+    icon: 'triangle',
   },
   {
     title: 'Agentic AI Automation',
     description:
-      'Not bots. Not scripts. We deploy autonomous AI agents that handle complex, multi-step workflows - so your team focuses on what only humans can do.',
+      'We build broader AI transformation programs, from practical automations to reusable toolchains that speed up internal workflows. The goal is measurable throughput gains, not isolated demos.',
     icon: 'grid',
+  },
+  {
+    title: 'Innovation Project Continuity',
+    description:
+      'When a funded innovation project proves its value, momentum should not stall. We provide structured handover, operations support, and ongoing technical ownership so outcomes keep delivering after the grant phase.',
+    icon: 'bars',
   },
 ]
 
