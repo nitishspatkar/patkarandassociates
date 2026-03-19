@@ -146,9 +146,6 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="col-span-12 mt-auto border-t border-white/20 pt-5 text-[10px] uppercase tracking-[0.18em] text-neutral-400 md:text-xs">
-            ZÜRICH · AGILE TRANSFORMATION · INNOSUISSE · RAPID PROTOTYPING · AGENTIC AI
-          </div>
         </div>
       </section>
 
