@@ -136,7 +136,7 @@ export default function Home() {
       </header>
 
       <section id="top" className="bg-[#0A0A0A] pt-32 text-white md:pt-36">
-        <div className="mx-auto grid min-h-screen w-full max-w-[1240px] grid-cols-12 gap-6 px-6 pb-10 lg:px-10">
+        <div className="mx-auto grid w-full max-w-[1240px] grid-cols-12 gap-6 px-6 pb-10 lg:px-10">
           <div className="col-span-12 flex flex-col justify-center pt-14 md:col-span-10">
             <h1 className="max-w-4xl text-5xl font-semibold leading-[0.96] tracking-[-0.04em] md:text-7xl lg:text-8xl">
               Your innovation deserves
