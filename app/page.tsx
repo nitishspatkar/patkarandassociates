@@ -209,8 +209,8 @@ export default function Home() {
       </section>
 
       <section id="about" className="border-t border-neutral-300 bg-white py-20 md:py-24">
-        <div className="mx-auto grid w-full max-w-[1240px] grid-cols-12 gap-8 px-6 lg:px-10">
-          <div className="col-span-12 md:col-span-7">
+        <div className="mx-auto w-full max-w-[1240px] grid grid-cols-1 md:grid-cols-2 gap-8 px-6 lg:px-10">
+          <div>
             <h2 className="max-w-2xl text-4xl font-semibold leading-[1.05] tracking-[-0.03em] md:text-5xl">
               Every innovation project is a leap. We make sure it&apos;s a calculated one.
             </h2>
@@ -220,10 +220,10 @@ export default function Home() {
               the uncertainty isn&apos;t there.
             </p>
           </div>
-          <div className="col-span-12 border-t border-neutral-300 pt-6 md:col-span-5 md:border-l md:border-t-0 md:pl-8 md:pt-0">
+          <div className="border-t border-neutral-300 pt-6 md:border-l md:border-t-0 md:pl-8 md:pt-0">
             <ul className="space-y-4">
               {domains.map((domain) => (
-                <li key={domain.name} className="flex items-baseline justify-between border-b border-neutral-200 pb-3">
+                <li key={domain.name} className="flex flex-col md:flex-row md:items-baseline md:justify-between border-b border-neutral-200 pb-3 gap-2">
                   <span className="text-sm font-medium">{domain.name}</span>
                   <span className="text-xs uppercase tracking-[0.12em] text-neutral-600">{domain.stat}</span>
                 </li>
@@ -234,14 +234,14 @@ export default function Home() {
       </section>
 
       <section id="contact" className="border-t border-white/15 bg-[#0A0A0A] py-20 text-white md:py-24">
-        <div className="mx-auto grid w-full max-w-[1240px] grid-cols-12 gap-10 px-6 lg:px-10">
-          <div className="col-span-12 md:col-span-6">
+        <div className="mx-auto w-full max-w-[1240px] grid grid-cols-1 md:grid-cols-2 gap-10 px-6 lg:px-10">
+          <div>
             <h2 className="text-4xl font-semibold leading-[1] tracking-[-0.03em] md:text-5xl">What&apos;s your challenge?</h2>
             <p className="mt-6 max-w-lg text-sm leading-relaxed text-neutral-400 md:text-base">
               No pitch. No retainer. Just a conversation about your problem.
             </p>
           </div>
-          <form className="col-span-12 space-y-4 md:col-span-6">
+          <form className="space-y-4">
             <label className="block">
               <span className="mb-2 block text-xs uppercase tracking-[0.12em] text-neutral-400">Name</span>
               <input
