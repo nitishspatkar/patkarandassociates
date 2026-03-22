@@ -119,7 +119,7 @@ export default function Home() {
 
   return (
     <main className="bg-white text-[#0A0A0A]">
-      <header className="absolute inset-x-0 top-0 z-30 border-b border-white/15">
+      <header className="absolute inset-x-0 top-0 z-40 border-b border-white/15 bg-[#0A0A0A]">
         <div className="mx-auto w-full max-w-[1240px] px-6 py-4 lg:px-10">
           <div className="flex items-center justify-between gap-2 md:gap-4">
             <a href="#top" className="text-xs md:text-sm font-semibold tracking-tight text-white">
@@ -148,7 +148,7 @@ export default function Home() {
             ))}
           </nav>
           {mobileMenuOpen && (
-            <nav className="md:hidden mt-4 flex flex-col gap-4 pb-4 text-[10px] uppercase tracking-[0.16em] text-neutral-300">
+            <nav className="md:hidden mt-4 flex flex-col gap-4 pb-4 border-t border-white/15 pt-4 text-xs uppercase tracking-[0.16em] text-neutral-300">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
