@@ -136,7 +136,7 @@ export default function Home() {
       </header>
 
       <section id="top" className="bg-[#0A0A0A] pt-32 text-white md:pt-36">
-        <div className="mx-auto grid min-h-screen w-full max-w-[1240px] grid-cols-12 gap-6 px-6 pb-10 lg:px-10">
+        <div className="mx-auto grid w-full max-w-[1240px] grid-cols-12 gap-6 px-6 pb-10 lg:px-10">
           <div className="col-span-12 flex flex-col justify-center pt-14 md:col-span-10">
             <h1 className="max-w-4xl text-5xl font-semibold leading-[0.96] tracking-[-0.04em] md:text-7xl lg:text-8xl">
               Your innovation deserves
@@ -153,6 +153,35 @@ export default function Home() {
               >
                 Tell us your challenge →
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" className="border-t border-neutral-200 bg-[#F5F4F0] py-20 md:py-24">
+        <div className="mx-auto w-full max-w-[1240px] px-6 lg:px-10">
+          <div className="mb-12 flex items-center gap-4">
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-neutral-900">What we do</p>
+            <div className="h-px flex-1 bg-neutral-300" />
+          </div>
+
+          <div className="space-y-14">
+            <div>
+              <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-600">AI Engineering</p>
+              <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+                {servicesAiEngineering.map((service) => (
+                  <ServiceCard key={service.title} title={service.title} description={service.description} icon={service.icon} />
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-600">Strategy &amp; Execution</p>
+              <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+                {servicesStrategyExecution.map((service) => (
+                  <ServiceCard key={service.title} title={service.title} description={service.description} icon={service.icon} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -209,35 +238,6 @@ export default function Home() {
               Your data is handled per Swiss privacy law.
             </p>
           </form>
-        </div>
-      </section>
-
-      <section id="services" className="border-t border-neutral-200 bg-[#F5F4F0] py-20 md:py-24">
-        <div className="mx-auto w-full max-w-[1240px] px-6 lg:px-10">
-          <div className="mb-12 flex items-center gap-4">
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-neutral-900">What we do</p>
-            <div className="h-px flex-1 bg-neutral-300" />
-          </div>
-
-          <div className="space-y-14">
-            <div>
-              <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-600">AI Engineering</p>
-              <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-                {servicesAiEngineering.map((service) => (
-                  <ServiceCard key={service.title} title={service.title} description={service.description} icon={service.icon} />
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-600">Strategy &amp; Execution</p>
-              <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-                {servicesStrategyExecution.map((service) => (
-                  <ServiceCard key={service.title} title={service.title} description={service.description} icon={service.icon} />
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
