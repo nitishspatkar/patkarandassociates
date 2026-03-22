@@ -158,35 +158,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="border-t border-neutral-200 bg-[#F5F4F0] py-20 md:py-24">
-        <div className="mx-auto w-full max-w-[1240px] px-6 lg:px-10">
-          <div className="mb-12 flex items-center gap-4">
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-neutral-900">What we do</p>
-            <div className="h-px flex-1 bg-neutral-300" />
-          </div>
-
-          <div className="space-y-14">
-            <div>
-              <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-600">AI Engineering</p>
-              <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-                {servicesAiEngineering.map((service) => (
-                  <ServiceCard key={service.title} title={service.title} description={service.description} icon={service.icon} />
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-600">Strategy &amp; Execution</p>
-              <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-                {servicesStrategyExecution.map((service) => (
-                  <ServiceCard key={service.title} title={service.title} description={service.description} icon={service.icon} />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="contact" className="border-t border-white/15 bg-[#0A0A0A] py-20 text-white md:py-24">
         <div className="mx-auto w-full max-w-[1240px] grid grid-cols-1 md:grid-cols-2 gap-10 px-6 lg:px-10">
           <div>
@@ -238,6 +209,35 @@ export default function Home() {
               Your data is handled per Swiss privacy law.
             </p>
           </form>
+        </div>
+      </section>
+
+      <section id="services" className="border-t border-neutral-200 bg-[#F5F4F0] py-20 md:py-24">
+        <div className="mx-auto w-full max-w-[1240px] px-6 lg:px-10">
+          <div className="mb-12 flex items-center gap-4">
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-neutral-900">What we do</p>
+            <div className="h-px flex-1 bg-neutral-300" />
+          </div>
+
+          <div className="space-y-14">
+            <div>
+              <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-600">AI Engineering</p>
+              <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+                {servicesAiEngineering.map((service) => (
+                  <ServiceCard key={service.title} title={service.title} description={service.description} icon={service.icon} />
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-600">Strategy &amp; Execution</p>
+              <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+                {servicesStrategyExecution.map((service) => (
+                  <ServiceCard key={service.title} title={service.title} description={service.description} icon={service.icon} />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
