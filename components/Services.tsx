@@ -1,5 +1,14 @@
 'use client'
 
+import { 
+  ArrowRight, 
+  Lightbulb, 
+  Zap, 
+  Code2, 
+  Users, 
+  Shield 
+} from 'lucide-react'
+
 interface ServiceItemProps {
   icon: React.ReactNode
   title: string
@@ -9,7 +18,7 @@ interface ServiceItemProps {
 function ServiceCard({ icon, title, description }: ServiceItemProps) {
   return (
     <div className="p-6 md:p-8 border border-border hover:border-foreground/30 transition-colors">
-      <div className="mb-4 text-2xl">{icon}</div>
+      <div className="mb-4 text-foreground">{icon}</div>
       <h3 className="text-xl md:text-2xl mb-3 text-foreground font-semibold">
         {title}
       </h3>
@@ -22,32 +31,32 @@ function ServiceCard({ icon, title, description }: ServiceItemProps) {
 
 const services = [
   {
-    icon: '→',
+    icon: <ArrowRight className="w-8 h-8" />,
     title: 'Agile Transition',
     description: 'Accelerate your digital transformation with proven agile methodologies tailored to your organization.',
   },
   {
-    icon: '◆',
+    icon: <Lightbulb className="w-8 h-8" />,
     title: 'Innovation Conceptualization',
     description: 'Turn strategic vision into actionable innovation roadmaps that drive competitive advantage.',
   },
   {
-    icon: '▲',
+    icon: <Zap className="w-8 h-8" />,
     title: 'Process Optimization',
     description: 'Streamline operations and maximize efficiency through data-driven process improvements.',
   },
   {
-    icon: '⊕',
+    icon: <Code2 className="w-8 h-8" />,
     title: 'Technology Stack Review',
     description: 'Evaluate and modernize your tech infrastructure for scalability and performance.',
   },
   {
-    icon: '◇',
+    icon: <Users className="w-8 h-8" />,
     title: 'Organizational Alignment',
     description: 'Ensure teams, tools, and strategies work in perfect harmony toward shared objectives.',
   },
   {
-    icon: '✕',
+    icon: <Shield className="w-8 h-8" />,
     title: 'Risk Management',
     description: 'Identify, assess, and mitigate IT risks before they impact your business continuity.',
   },
