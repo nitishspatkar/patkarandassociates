@@ -187,52 +187,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="work" className="border-t border-neutral-300 bg-white py-20 md:py-24">
-        <div className="mx-auto w-full max-w-[1240px] px-6 lg:px-10">
-          <div className="mb-10 flex items-center gap-4">
-            <p className="text-xs uppercase tracking-[0.18em] text-neutral-600">Selected Work</p>
-            <div className="h-px flex-1 bg-neutral-300" />
-          </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {workProjects.map((project) => (
-              <article key={project.name} className="rounded-md border border-neutral-300 bg-[#F5F4F0] p-4">
-                <div className="aspect-[16/10] w-full border border-neutral-300 bg-neutral-700" />
-                <h3 className="mt-5 text-2xl font-semibold tracking-[-0.02em]">{project.name}</h3>
-                <p className="mt-2 text-xs uppercase tracking-[0.12em] text-neutral-600">{project.category}</p>
-                <a href="#contact" className="mt-5 inline-block text-sm text-neutral-900 transition-opacity hover:opacity-70">
-                  Explore project →
-                </a>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="about" className="border-t border-neutral-300 bg-white py-20 md:py-24">
-        <div className="mx-auto w-full max-w-[1240px] grid grid-cols-1 md:grid-cols-2 gap-8 px-6 lg:px-10">
-          <div>
-            <h2 className="max-w-2xl text-4xl font-semibold leading-[1.05] tracking-[-0.03em] md:text-5xl">
-              Every innovation project is a leap. We make sure it&apos;s a calculated one.
-            </h2>
-            <p className="mt-8 max-w-2xl text-sm leading-relaxed text-neutral-700 md:text-base">
-              The best ideas are often the least obvious ones. We work with organisations on projects that are novel enough to be
-              exciting and unclear enough to be hard. We figure it out together — methodically, quickly, and without pretending
-              the uncertainty isn&apos;t there.
-            </p>
-          </div>
-          <div className="border-t border-neutral-300 pt-6 md:border-l md:border-t-0 md:pl-8 md:pt-0">
-            <ul className="space-y-4">
-              {domains.map((domain) => (
-                <li key={domain.name} className="flex flex-col md:flex-row md:items-baseline md:justify-between border-b border-neutral-200 pb-3 gap-2">
-                  <span className="text-sm font-medium">{domain.name}</span>
-                  <span className="text-xs uppercase tracking-[0.12em] text-neutral-600">{domain.stat}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
       <section id="contact" className="border-t border-white/15 bg-[#0A0A0A] py-20 text-white md:py-24">
         <div className="mx-auto w-full max-w-[1240px] grid grid-cols-1 md:grid-cols-2 gap-10 px-6 lg:px-10">
           <div>
@@ -284,6 +238,52 @@ export default function Home() {
               Your data is handled per Swiss privacy law.
             </p>
           </form>
+        </div>
+      </section>
+
+      <section id="work" className="border-t border-neutral-300 bg-white py-20 md:py-24">
+        <div className="mx-auto w-full max-w-[1240px] px-6 lg:px-10">
+          <div className="mb-10 flex items-center gap-4">
+            <p className="text-xs uppercase tracking-[0.18em] text-neutral-600">Selected Work</p>
+            <div className="h-px flex-1 bg-neutral-300" />
+          </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {workProjects.map((project) => (
+              <article key={project.name} className="rounded-md border border-neutral-300 bg-[#F5F4F0] p-4">
+                <div className="aspect-[16/10] w-full border border-neutral-300 bg-neutral-700" />
+                <h3 className="mt-5 text-2xl font-semibold tracking-[-0.02em]">{project.name}</h3>
+                <p className="mt-2 text-xs uppercase tracking-[0.12em] text-neutral-600">{project.category}</p>
+                <a href="#contact" className="mt-5 inline-block text-sm text-neutral-900 transition-opacity hover:opacity-70">
+                  Explore project →
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="border-t border-neutral-300 bg-white py-20 md:py-24">
+        <div className="mx-auto w-full max-w-[1240px] grid grid-cols-1 md:grid-cols-2 gap-8 px-6 lg:px-10">
+          <div>
+            <h2 className="max-w-2xl text-4xl font-semibold leading-[1.05] tracking-[-0.03em] md:text-5xl">
+              Every innovation project is a leap. We make sure it&apos;s a calculated one.
+            </h2>
+            <p className="mt-8 max-w-2xl text-sm leading-relaxed text-neutral-700 md:text-base">
+              The best ideas are often the least obvious ones. We work with organisations on projects that are novel enough to be
+              exciting and unclear enough to be hard. We figure it out together — methodically, quickly, and without pretending
+              the uncertainty isn&apos;t there.
+            </p>
+          </div>
+          <div className="border-t border-neutral-300 pt-6 md:border-l md:border-t-0 md:pl-8 md:pt-0">
+            <ul className="space-y-4">
+              {domains.map((domain) => (
+                <li key={domain.name} className="flex flex-col md:flex-row md:items-baseline md:justify-between border-b border-neutral-200 pb-3 gap-2">
+                  <span className="text-sm font-medium">{domain.name}</span>
+                  <span className="text-xs uppercase tracking-[0.12em] text-neutral-600">{domain.stat}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
