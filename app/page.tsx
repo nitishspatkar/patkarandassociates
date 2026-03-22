@@ -1,4 +1,25 @@
-const services = [
+const servicesAiEngineering = [
+  {
+    title: 'AI Strategy & Readiness',
+    description:
+      "Before building, you need clarity. We help organisations assess where AI creates real value, what's feasible today, and how to sequence adoption so investment lands where it matters.",
+    icon: 'lineChart',
+  },
+  {
+    title: 'Agentic AI Automation',
+    description:
+      'We build broader AI transformation programs, from practical automations to reusable toolchains that speed up internal workflows. The goal is measurable throughput gains, not isolated demos.',
+    icon: 'threeBlocks',
+  },
+  {
+    title: 'AI Product Integration',
+    description:
+      'We embed AI directly into your existing products — copilots, document intelligence, chat interfaces — with full observability, guardrails, and handoff to your engineering team.',
+    icon: 'checkSquare',
+  },
+]
+
+const servicesStrategyExecution = [
   {
     title: 'Innovation Conceptualization',
     description:
@@ -8,32 +29,32 @@ const services = [
   {
     title: 'Rapid Prototyping',
     description:
-      "We compress months into weeks. From validated concept to working prototype - fast enough to show investors, clients, or your own team that it's real.",
-    icon: 'diamond',
+      "We compress months into weeks. From validated concept to working prototype — fast enough to show investors, clients, or your own team that it's real.",
+    icon: 'hexagon',
   },
   {
     title: 'Data-Driven Insights',
     description:
-      'We design decision systems around your operational and product data. From instrumentation to dashboards and forecasting, we turn fragmented signals into clear next actions teams can execute immediately.',
-    icon: 'dots',
+      'We design decision systems around your operational and product data. From instrumentation to dashboards and forecasting, we turn fragmented signals into clear next actions.',
+    icon: 'dataNetwork',
   },
   {
     title: 'Agile Transformation',
     description:
-      "Most teams don't fail because they lack talent. They fail because their processes can't keep up. We guide organizations through the messy, real work of becoming adaptive - from rituals to culture.",
+      "Most teams don't fail because they lack talent. They fail because their processes can't keep up. We guide organizations through the messy, real work of becoming adaptive — from rituals to culture.",
     icon: 'triangle',
-  },
-  {
-    title: 'Agentic AI Automation',
-    description:
-      'We build broader AI transformation programs, from practical automations to reusable toolchains that speed up internal workflows. The goal is measurable throughput gains, not isolated demos.',
-    icon: 'grid',
   },
   {
     title: 'Innovation Project Continuity',
     description:
-      'When a funded innovation project proves its value, momentum should not stall. We provide structured handover, operations support, and ongoing technical ownership so outcomes keep delivering after the grant phase.',
+      'When a funded innovation project proves its value, momentum should not stall. We provide structured handover, operations support, and ongoing technical ownership so outcomes keep delivering.',
     icon: 'bars',
+  },
+  {
+    title: 'Digital Sustainable Strategy',
+    description:
+      'Sustainability is multi-dimensional. Using the SuSAF framework, we help organisations evaluate and design digital initiatives across technical, environmental, economic, and social dimensions — not just green IT.',
+    icon: 'sustainability',
   },
 ]
 
@@ -44,18 +65,40 @@ const workProjects = [
 ]
 
 const domains = [
-  { name: 'Digital Transformation', stat: '14+ Years' },
-  { name: 'Applied AI', stat: '40+ Projects' },
-  { name: 'Process Engineering', stat: '60+ Engagements' },
-  { name: 'Innovation Strategy', stat: '20+ Programs' },
+  { name: 'Digital Transformation', stat: '10+ Years' },
+  { name: 'Applied AI', stat: '10+ Projects' },
+  { name: 'Innovation Strategy', stat: '15+ Projects' },
+  { name: 'Applied Research and Innovation', stat: '10+ Years' },
 ]
 
 function ServiceIcon({ type }: { type: string }) {
   switch (type) {
-    case 'triangle':
+    case 'lineChart':
+      return (
+        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+          <path d="M3 14l4-4 3 2 7-7" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M14 5h3v3" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      )
+    case 'threeBlocks':
       return (
         <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" aria-hidden="true">
-          <path d="M10 3 18 17H2L10 3Z" fill="currentColor" />
+          <rect x="3" y="8" width="4" height="9" fill="currentColor" />
+          <rect x="8" y="5" width="4" height="12" fill="currentColor" />
+          <rect x="13" y="10" width="4" height="7" fill="currentColor" />
+        </svg>
+      )
+    case 'checkSquare':
+      return (
+        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+          <rect x="3.5" y="3.5" width="13" height="13" rx="1" />
+          <path d="M6 10l2.5 2.5L14 7" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      )
+    case 'triangle':
+      return (
+        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+          <path d="M10 3.5 16.5 16.5H3.5L10 3.5Z" strokeLinejoin="round" />
         </svg>
       )
     case 'square':
@@ -64,24 +107,32 @@ function ServiceIcon({ type }: { type: string }) {
           <rect x="3" y="3" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.5" />
         </svg>
       )
+    case 'hexagon':
+      return (
+        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+          <path d="M10 2.5l6.5 3.75v7.5L10 17.5l-6.5-3.75v-7.5L10 2.5z" strokeLinejoin="round" />
+        </svg>
+      )
     case 'bars':
       return (
         <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" aria-hidden="true">
-          <path d="M4 5h12M4 10h8M4 15h12" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M4 5h12M4 10h8M4 15h12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
         </svg>
       )
-    case 'diamond':
+    case 'dataNetwork':
       return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" aria-hidden="true">
-          <path d="M10 2 18 10 10 18 2 10 10 2Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
+        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+          <circle cx="5" cy="12" r="2" fill="currentColor" stroke="none" />
+          <circle cx="10" cy="6" r="2" fill="currentColor" stroke="none" />
+          <circle cx="15" cy="13" r="2" fill="currentColor" stroke="none" />
+          <path d="M6.7 10.5 8.6 7.5M11.4 7.5l2.2 4.2M7.2 12.8l5.6 0.4" strokeLinecap="round" />
         </svg>
       )
-    case 'dots':
+    case 'sustainability':
       return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" aria-hidden="true">
-          <circle cx="5" cy="10" r="1.8" fill="currentColor" />
-          <circle cx="10" cy="10" r="1.8" fill="currentColor" />
-          <circle cx="15" cy="10" r="1.8" fill="currentColor" />
+        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+          <circle cx="10" cy="10" r="6.5" />
+          <path d="M10 6v8" strokeLinecap="round" />
         </svg>
       )
     default:
@@ -94,6 +145,26 @@ function ServiceIcon({ type }: { type: string }) {
         </svg>
       )
   }
+}
+
+function ServiceCard({
+  title,
+  description,
+  icon,
+}: {
+  title: string
+  description: string
+  icon: string
+}) {
+  return (
+    <article className="rounded-md border border-neutral-300 bg-[#F5F4F0] p-6">
+      <div className="mb-5 inline-flex h-9 w-9 items-center justify-center rounded-sm border border-neutral-300 bg-white">
+        <ServiceIcon type={icon} />
+      </div>
+      <h2 className="text-xl font-semibold tracking-[-0.02em]">{title}</h2>
+      <p className="mt-3 text-sm leading-relaxed text-neutral-700">{description}</p>
+    </article>
+  )
 }
 
 export default function Home() {
@@ -149,27 +220,36 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="border-t border-neutral-200 bg-white py-20 md:py-24">
+      <section id="services" className="border-t border-neutral-200 bg-[#F5F4F0] py-20 md:py-24">
         <div className="mx-auto w-full max-w-[1240px] px-6 lg:px-10">
-          <div className="mb-10 flex items-center gap-4">
-            <p className="text-xs uppercase tracking-[0.18em] text-neutral-600">What we do</p>
+          <div className="mb-12 flex items-center gap-4">
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-neutral-900">What we do</p>
             <div className="h-px flex-1 bg-neutral-300" />
           </div>
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {services.map((service) => (
-              <article key={service.title} className="border border-neutral-300 bg-[#F5F4F0] p-6">
-                <div className="mb-5 inline-flex h-9 w-9 items-center justify-center border border-neutral-300 bg-white">
-                  <ServiceIcon type={service.icon} />
-                </div>
-                <h2 className="text-xl font-semibold tracking-[-0.02em]">{service.title}</h2>
-                <p className="mt-3 text-sm leading-relaxed text-neutral-700">{service.description}</p>
-              </article>
-            ))}
+
+          <div className="space-y-14">
+            <div>
+              <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-600">AI Engineering</p>
+              <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+                {servicesAiEngineering.map((service) => (
+                  <ServiceCard key={service.title} title={service.title} description={service.description} icon={service.icon} />
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-600">Strategy &amp; Execution</p>
+              <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+                {servicesStrategyExecution.map((service) => (
+                  <ServiceCard key={service.title} title={service.title} description={service.description} icon={service.icon} />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="work" className="border-t border-neutral-300 bg-[#F5F4F0] py-20 md:py-24">
+      <section id="work" className="border-t border-neutral-300 bg-white py-20 md:py-24">
         <div className="mx-auto w-full max-w-[1240px] px-6 lg:px-10">
           <div className="mb-10 flex items-center gap-4">
             <p className="text-xs uppercase tracking-[0.18em] text-neutral-600">Selected Work</p>
@@ -177,7 +257,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
             {workProjects.map((project) => (
-              <article key={project.name} className="border border-neutral-300 bg-white p-4">
+              <article key={project.name} className="rounded-md border border-neutral-300 bg-[#F5F4F0] p-4">
                 <div className="aspect-[16/10] w-full border border-neutral-300 bg-neutral-700" />
                 <h3 className="mt-5 text-2xl font-semibold tracking-[-0.02em]">{project.name}</h3>
                 <p className="mt-2 text-xs uppercase tracking-[0.12em] text-neutral-600">{project.category}</p>
@@ -193,16 +273,13 @@ export default function Home() {
       <section id="about" className="border-t border-neutral-300 bg-white py-20 md:py-24">
         <div className="mx-auto grid w-full max-w-[1240px] grid-cols-12 gap-8 px-6 lg:px-10">
           <div className="col-span-12 md:col-span-7">
-            <h2 className="max-w-xl text-4xl font-semibold leading-[1] tracking-[-0.03em] md:text-5xl">
-              Senior expertise. No junior filler.
+            <h2 className="max-w-2xl text-4xl font-semibold leading-[1.05] tracking-[-0.03em] md:text-5xl">
+              Every innovation project is a leap. We make sure it&apos;s a calculated one.
             </h2>
             <p className="mt-8 max-w-2xl text-sm leading-relaxed text-neutral-700 md:text-base">
-              We operate through an associate model built for precision. Every engagement is led by experienced consultants who
-              have delivered in regulated industries, high-growth ventures, and public innovation programs.
-            </p>
-            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-neutral-700 md:text-base">
-              Our background combines research depth with execution in industry. That means strategy is always tied to real
-              implementation constraints, measurable outcomes, and continuity after delivery.
+              The best ideas are often the least obvious ones. We work with organisations on projects that are novel enough to be
+              exciting and unclear enough to be hard. We figure it out together — methodically, quickly, and without pretending
+              the uncertainty isn&apos;t there.
             </p>
           </div>
           <div className="col-span-12 border-t border-neutral-300 pt-6 md:col-span-5 md:border-l md:border-t-0 md:pl-8 md:pt-0">
