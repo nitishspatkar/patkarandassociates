@@ -1,5 +1,7 @@
 'use client'
 
+import { useState } from 'react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import {
   MapIcon,
   Cog6ToothIcon,
@@ -106,6 +108,15 @@ function ServiceCard({
 }
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const navLinks = [
+    { label: 'Services', href: '#services' },
+    { label: 'Work', href: '#work' },
+    { label: 'About', href: '#about' },
+    { label: 'Contact', href: '#contact' },
+  ]
+
   return (
     <main className="bg-white text-[#0A0A0A]">
       <header className="absolute inset-x-0 top-0 z-30 border-b border-white/15">
@@ -117,21 +128,39 @@ export default function Home() {
             <div className="flex-shrink-0 rounded-full border border-white/20 px-2 md:px-3 py-1 text-[10px] uppercase tracking-[0.12em] text-neutral-300 whitespace-nowrap">
               🇨🇭 Switzerland
             </div>
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden text-white transition-colors hover:text-neutral-300"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <XMarkIcon className="h-6 w-6" />
+              ) : (
+                <Bars3Icon className="h-6 w-6" />
+              )}
+            </button>
           </div>
-          <nav className="mt-3 flex justify-end gap-3 md:gap-5 text-[10px] uppercase tracking-[0.16em] text-neutral-300 md:text-xs lg:gap-7">
-            <a href="#services" className="transition-colors hover:text-white">
-              Services
-            </a>
-            <a href="#work" className="transition-colors hover:text-white">
-              Work
-            </a>
-            <a href="#about" className="transition-colors hover:text-white">
-              About
-            </a>
-            <a href="#contact" className="transition-colors hover:text-white">
-              Contact
-            </a>
+          <nav className="hidden md:flex mt-3 justify-end gap-3 md:gap-5 text-[10px] uppercase tracking-[0.16em] text-neutral-300 md:text-xs lg:gap-7">
+            {navLinks.map((link) => (
+              <a key={link.href} href={link.href} className="transition-colors hover:text-white">
+                {link.label}
+              </a>
+            ))}
           </nav>
+          {mobileMenuOpen && (
+            <nav className="md:hidden mt-4 flex flex-col gap-4 pb-4 text-[10px] uppercase tracking-[0.16em] text-neutral-300">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="transition-colors hover:text-white"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          )}
         </div>
       </header>
 
