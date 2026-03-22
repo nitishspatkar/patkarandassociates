@@ -110,15 +110,15 @@ export default function Home() {
     <main className="bg-white text-[#0A0A0A]">
       <header className="absolute inset-x-0 top-0 z-30 border-b border-white/15">
         <div className="mx-auto w-full max-w-[1240px] px-6 py-4 lg:px-10">
-          <div className="flex items-center justify-between gap-4">
-            <a href="#top" className="text-sm font-semibold tracking-tight text-white">
+          <div className="flex items-center justify-between gap-2 md:gap-4">
+            <a href="#top" className="text-xs md:text-sm font-semibold tracking-tight text-white">
               Patkar &amp; Associates
             </a>
-            <div className="rounded-full border border-white/20 px-3 py-1 text-[10px] uppercase tracking-[0.12em] text-neutral-300">
-              🇨🇭 Engineered in Switzerland
+            <div className="flex-shrink-0 rounded-full border border-white/20 px-2 md:px-3 py-1 text-[10px] uppercase tracking-[0.12em] text-neutral-300 whitespace-nowrap">
+              🇨🇭 Switzerland
             </div>
           </div>
-          <nav className="mt-3 flex justify-end gap-5 text-[10px] uppercase tracking-[0.16em] text-neutral-300 md:text-xs lg:gap-7">
+          <nav className="mt-3 flex justify-end gap-3 md:gap-5 text-[10px] uppercase tracking-[0.16em] text-neutral-300 md:text-xs lg:gap-7">
             <a href="#services" className="transition-colors hover:text-white">
               Services
             </a>
