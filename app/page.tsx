@@ -1,21 +1,35 @@
+'use client'
+
+import {
+  MapIcon,
+  Cog6ToothIcon,
+  PuzzlePieceIcon,
+  LightBulbIcon,
+  RocketLaunchIcon,
+  PresentationChartBarIcon,
+  ArrowPathIcon,
+  PlayIcon,
+  GlobeAltIcon,
+} from '@heroicons/react/24/outline'
+
 const servicesAiEngineering = [
   {
     title: 'AI Strategy & Readiness',
     description:
       "Before building, you need clarity. We help organisations assess where AI creates real value, what's feasible today, and how to sequence adoption so investment lands where it matters.",
-    icon: 'compass',
+    icon: MapIcon,
   },
   {
     title: 'Agentic AI Automation',
     description:
       'We build broader AI transformation programs, from practical automations to reusable toolchains that speed up internal workflows. The goal is measurable throughput gains, not isolated demos.',
-    icon: 'gear',
+    icon: Cog6ToothIcon,
   },
   {
     title: 'AI Product Integration',
     description:
       'We embed AI directly into your existing products — copilots, document intelligence, chat interfaces — with full observability, guardrails, and handoff to your engineering team.',
-    icon: 'plug',
+    icon: PuzzlePieceIcon,
   },
 ]
 
@@ -24,37 +38,37 @@ const servicesStrategyExecution = [
     title: 'Innovation Conceptualization',
     description:
       "A bold idea that never gets tested is just a risk you're carrying. We translate raw innovation into structured concepts that reduce adoption risk before a single line of code is written.",
-    icon: 'lightbulb',
+    icon: LightBulbIcon,
   },
   {
     title: 'Rapid Prototyping',
     description:
       "We compress months into weeks. From validated concept to working prototype — fast enough to show investors, clients, or your own team that it's real.",
-    icon: 'rocket',
+    icon: RocketLaunchIcon,
   },
   {
     title: 'Data-Driven Insights',
     description:
       'We design decision systems around your operational and product data. From instrumentation to dashboards and forecasting, we turn fragmented signals into clear next actions.',
-    icon: 'chart',
+    icon: PresentationChartBarIcon,
   },
   {
     title: 'Agile Transformation',
     description:
       "Most teams don't fail because they lack talent. They fail because their processes can't keep up. We guide organizations through the messy, real work of becoming adaptive — from rituals to culture.",
-    icon: 'cycle',
+    icon: ArrowPathIcon,
   },
   {
     title: 'Innovation Project Continuity',
     description:
       'When a funded innovation project proves its value, momentum should not stall. We provide structured handover, operations support, and ongoing technical ownership so outcomes keep delivering.',
-    icon: 'forward',
+    icon: PlayIcon,
   },
   {
     title: 'Digital Sustainable Strategy',
     description:
       'Sustainability is multi-dimensional. Using the SuSAF framework, we help organisations evaluate and design digital initiatives across technical, environmental, economic, and social dimensions — not just green IT.',
-    icon: 'leaf',
+    icon: GlobeAltIcon,
   },
 ]
 
@@ -71,111 +85,19 @@ const domains = [
   { name: 'Applied Research and Innovation', stat: '10+ Years' },
 ]
 
-function ServiceIcon({ type }: { type: string }) {
-  switch (type) {
-    case 'compass':
-      return (
-        <svg width="48" height="48" viewBox="0 0 48 48" className="text-neutral-900" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="24" cy="24" r="14" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M24 12L30 28L24 26L18 28Z" fill="currentColor" />
-          <circle cx="24" cy="24" r="2" fill="currentColor" />
-        </svg>
-      )
-    case 'gear':
-      return (
-        <svg width="48" height="48" viewBox="0 0 48 48" className="text-neutral-900" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="24" cy="24" r="6" stroke="currentColor" strokeWidth="1.5" />
-          <g stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-            <line x1="24" y1="8" x2="24" y2="4" />
-            <line x1="24" y1="44" x2="24" y2="40" />
-            <line x1="40" y1="24" x2="44" y2="24" />
-            <line x1="4" y1="24" x2="8" y2="24" />
-            <line x1="36.97" y1="11.03" x2="39.9" y2="8.1" />
-            <line x1="8.1" y1="39.9" x2="11.03" y2="36.97" />
-            <line x1="36.97" y1="36.97" x2="39.9" y2="39.9" />
-            <line x1="8.1" y1="8.1" x2="11.03" y2="11.03" />
-          </g>
-        </svg>
-      )
-    case 'plug':
-      return (
-        <svg width="48" height="48" viewBox="0 0 48 48" className="text-neutral-900" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="16" y="20" width="6" height="14" stroke="currentColor" strokeWidth="1.5" />
-          <rect x="26" y="20" width="6" height="14" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M14 20V14Q14 10 18 10H30Q34 10 34 14V20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          <rect x="18" y="34" width="12" height="4" stroke="currentColor" strokeWidth="1.5" />
-        </svg>
-      )
-    case 'lightbulb':
-      return (
-        <svg width="48" height="48" viewBox="0 0 48 48" className="text-neutral-900" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 10C19.6 10 16 13.6 16 18C16 22.4 19.6 26 24 26C28.4 26 32 22.4 32 18C32 13.6 28.4 10 24 10Z" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M20 26H28C28.5 26 29 26.5 29 27V28C29 29.1 28.1 30 27 30H21C19.9 30 19 29.1 19 28V27C19 26.5 19.5 26 20 26Z" fill="currentColor" />
-          <rect x="22" y="30" width="4" height="4" fill="currentColor" />
-        </svg>
-      )
-    case 'rocket':
-      return (
-        <svg width="48" height="48" viewBox="0 0 48 48" className="text-neutral-900" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 8L28 18H20Z" fill="currentColor" />
-          <circle cx="24" cy="28" r="8" stroke="currentColor" strokeWidth="1.5" />
-          <circle cx="24" cy="28" r="4" fill="currentColor" opacity="0.5" />
-          <path d="M18 34L16 42L20 38M30 34L32 42L28 38" fill="currentColor" opacity="0.6" />
-        </svg>
-      )
-    case 'chart':
-      return (
-        <svg width="48" height="48" viewBox="0 0 48 48" className="text-neutral-900" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="10" y1="36" x2="38" y2="36" stroke="currentColor" strokeWidth="1.5" />
-          <rect x="12" y="28" width="4" height="8" fill="currentColor" />
-          <rect x="20" y="20" width="4" height="16" fill="currentColor" />
-          <rect x="28" y="12" width="4" height="24" fill="currentColor" />
-        </svg>
-      )
-    case 'cycle':
-      return (
-        <svg width="48" height="48" viewBox="0 0 48 48" className="text-neutral-900" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 10C16.3 10 10 16.3 10 24C10 31.7 16.3 38 24 38" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-          <polyline points="24 38 32 32 24 34" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-          <path d="M24 10C31.7 10 38 16.3 38 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
-        </svg>
-      )
-    case 'forward':
-      return (
-        <svg width="48" height="48" viewBox="0 0 48 48" className="text-neutral-900" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 24H38" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-          <polyline points="30 16 38 24 30 32" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-        </svg>
-      )
-    case 'leaf':
-      return (
-        <svg width="48" height="48" viewBox="0 0 48 48" className="text-neutral-900" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 10C24 10 16 18 16 26C16 33.7 19.6 38 24 38C28.4 38 32 33.7 32 26C32 18 24 10 24 10Z" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M24 10C24 10 24 15 24 20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
-        </svg>
-      )
-    default:
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" aria-hidden="true">
-          <rect x="3" y="3" width="5" height="5" fill="currentColor" />
-        </svg>
-      )
-  }
-}
-
 function ServiceCard({
   title,
   description,
-  icon,
+  icon: Icon,
 }: {
   title: string
   description: string
-  icon: string
+  icon: React.ComponentType<{ className?: string }>
 }) {
   return (
     <article className="rounded-md border border-neutral-300 bg-[#F5F4F0] p-6">
-      <div className="mb-5 flex h-16 items-center justify-start">
-        <ServiceIcon type={icon} />
+      <div className="mb-5">
+        <Icon className="h-10 w-10 text-neutral-900" />
       </div>
       <h2 className="text-xl font-semibold tracking-[-0.02em]">{title}</h2>
       <p className="mt-3 text-sm leading-relaxed text-neutral-700">{description}</p>
