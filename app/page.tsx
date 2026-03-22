@@ -3,16 +3,19 @@ const servicesAiEngineering = [
     title: 'AI Strategy & Readiness',
     description:
       "Before building, you need clarity. We help organisations assess where AI creates real value, what's feasible today, and how to sequence adoption so investment lands where it matters.",
+    icon: 'arrowWave',
   },
   {
     title: 'Agentic AI Automation',
     description:
       'We build broader AI transformation programs, from practical automations to reusable toolchains that speed up internal workflows. The goal is measurable throughput gains, not isolated demos.',
+    icon: 'nodes',
   },
   {
     title: 'AI Product Integration',
     description:
       'We embed AI directly into your existing products — copilots, document intelligence, chat interfaces — with full observability, guardrails, and handoff to your engineering team.',
+    icon: 'waves',
   },
 ]
 
@@ -21,31 +24,37 @@ const servicesStrategyExecution = [
     title: 'Innovation Conceptualization',
     description:
       "A bold idea that never gets tested is just a risk you're carrying. We translate raw innovation into structured concepts that reduce adoption risk before a single line of code is written.",
+    icon: 'grid',
   },
   {
     title: 'Rapid Prototyping',
     description:
       "We compress months into weeks. From validated concept to working prototype — fast enough to show investors, clients, or your own team that it's real.",
+    icon: 'team',
   },
   {
     title: 'Data-Driven Insights',
     description:
       'We design decision systems around your operational and product data. From instrumentation to dashboards and forecasting, we turn fragmented signals into clear next actions.',
+    icon: 'checkmark',
   },
   {
     title: 'Agile Transformation',
     description:
       "Most teams don't fail because they lack talent. They fail because their processes can't keep up. We guide organizations through the messy, real work of becoming adaptive — from rituals to culture.",
+    icon: 'triangle',
   },
   {
     title: 'Innovation Project Continuity',
     description:
       'When a funded innovation project proves its value, momentum should not stall. We provide structured handover, operations support, and ongoing technical ownership so outcomes keep delivering.',
+    icon: 'bars',
   },
   {
     title: 'Digital Sustainable Strategy',
     description:
       'Sustainability is multi-dimensional. Using the SuSAF framework, we help organisations evaluate and design digital initiatives across technical, environmental, economic, and social dimensions — not just green IT.',
+    icon: 'shield',
   },
 ]
 
@@ -62,24 +71,108 @@ const domains = [
   { name: 'Applied Research and Innovation', stat: '10+ Years' },
 ]
 
+function ServiceIcon({ type }: { type: string }) {
+  switch (type) {
+    case 'arrowWave':
+      return (
+        <svg width="48" height="48" viewBox="0 0 48 48" className="text-neutral-900" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="8" y1="24" x2="40" y2="24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <polyline points="35,19 40,24 35,29" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          <polyline points="32,19 27,24 32,29" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      )
+    case 'nodes':
+      return (
+        <svg width="48" height="48" viewBox="0 0 48 48" className="text-neutral-900" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="12" r="3" fill="currentColor" />
+          <circle cx="12" cy="24" r="3" fill="currentColor" />
+          <circle cx="36" cy="24" r="3" fill="currentColor" />
+          <circle cx="24" cy="36" r="3" fill="currentColor" />
+          <line x1="24" y1="12" x2="12" y2="24" stroke="currentColor" strokeWidth="1" opacity="0.5" />
+          <line x1="24" y1="12" x2="36" y2="24" stroke="currentColor" strokeWidth="1" opacity="0.5" />
+          <line x1="12" y1="24" x2="24" y2="36" stroke="currentColor" strokeWidth="1" opacity="0.5" />
+          <line x1="36" y1="24" x2="24" y2="36" stroke="currentColor" strokeWidth="1" opacity="0.5" />
+        </svg>
+      )
+    case 'waves':
+      return (
+        <svg width="48" height="48" viewBox="0 0 48 48" className="text-neutral-900" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 8 28 Q 14 18, 20 28 T 32 28" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M 8 20 Q 14 10, 20 20 T 32 20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
+          <path d="M 8 36 Q 14 26, 20 36 T 32 36" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
+        </svg>
+      )
+    case 'grid':
+      return (
+        <svg width="48" height="48" viewBox="0 0 48 48" className="text-neutral-900" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="8" width="12" height="12" stroke="currentColor" strokeWidth="1.5" />
+          <rect x="24" y="8" width="12" height="12" stroke="currentColor" strokeWidth="1.5" opacity="0.6" />
+          <rect x="8" y="24" width="12" height="12" stroke="currentColor" strokeWidth="1.5" opacity="0.6" />
+          <rect x="24" y="24" width="12" height="12" stroke="currentColor" strokeWidth="1.5" />
+        </svg>
+      )
+    case 'team':
+      return (
+        <svg width="48" height="48" viewBox="0 0 48 48" className="text-neutral-900" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="16" r="4" fill="currentColor" opacity="0.8" />
+          <circle cx="14" cy="28" r="3.5" fill="currentColor" opacity="0.6" />
+          <circle cx="34" cy="28" r="3.5" fill="currentColor" opacity="0.6" />
+          <path d="M 24 20 Q 16 24 12 32" stroke="currentColor" strokeWidth="1.5" opacity="0.5" />
+          <path d="M 24 20 Q 32 24 36 32" stroke="currentColor" strokeWidth="1.5" opacity="0.5" />
+          <path d="M 14 31.5 L 34 31.5" stroke="currentColor" strokeWidth="1" opacity="0.4" />
+        </svg>
+      )
+    case 'checkmark':
+      return (
+        <svg width="48" height="48" viewBox="0 0 48 48" className="text-neutral-900" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="10" width="28" height="28" rx="2" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M 16 24 L 20 28 L 32 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      )
+    case 'triangle':
+      return (
+        <svg width="48" height="48" viewBox="0 0 48 48" className="text-neutral-900" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 24 8 L 38 38 L 10 38 Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+        </svg>
+      )
+    case 'bars':
+      return (
+        <svg width="48" height="48" viewBox="0 0 48 48" className="text-neutral-900" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="8" y1="12" x2="40" y2="12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <line x1="8" y1="24" x2="32" y2="24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <line x1="8" y1="36" x2="40" y2="36" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+      )
+    case 'shield':
+      return (
+        <svg width="48" height="48" viewBox="0 0 48 48" className="text-neutral-900" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 24 8 L 14 14 L 14 24 Q 14 32 24 36 Q 34 32 34 24 L 34 14 Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          <path d="M 20 24 L 24 28 L 32 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      )
+    default:
+      return (
+        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" aria-hidden="true">
+          <rect x="3" y="3" width="5" height="5" fill="currentColor" />
+        </svg>
+      )
+  }
+}
+
 function ServiceCard({
   title,
   description,
-  colorIndex,
+  icon,
 }: {
   title: string
   description: string
-  colorIndex: number
+  icon: string
 }) {
-  const colors = [
-    'bg-blue-100 dark:bg-blue-900',
-    'bg-slate-100 dark:bg-slate-800',
-    'bg-amber-100 dark:bg-amber-900',
-  ]
-  
   return (
     <article className="rounded-md border border-neutral-300 bg-[#F5F4F0] p-6">
-      <div className={`mb-5 h-8 w-8 rounded ${colors[colorIndex % 3]}`} />
+      <div className="mb-5 flex h-16 items-center justify-start">
+        <ServiceIcon type={icon} />
+      </div>
       <h2 className="text-xl font-semibold tracking-[-0.02em]">{title}</h2>
       <p className="mt-3 text-sm leading-relaxed text-neutral-700">{description}</p>
     </article>
@@ -150,8 +243,8 @@ export default function Home() {
             <div>
               <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-600">AI Engineering</p>
               <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-                {servicesAiEngineering.map((service, index) => (
-                  <ServiceCard key={service.title} title={service.title} description={service.description} colorIndex={index} />
+                {servicesAiEngineering.map((service) => (
+                  <ServiceCard key={service.title} title={service.title} description={service.description} icon={service.icon} />
                 ))}
               </div>
             </div>
@@ -159,8 +252,8 @@ export default function Home() {
             <div>
               <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-600">Strategy &amp; Execution</p>
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-                {servicesStrategyExecution.map((service, index) => (
-                  <ServiceCard key={service.title} title={service.title} description={service.description} colorIndex={index} />
+                {servicesStrategyExecution.map((service) => (
+                  <ServiceCard key={service.title} title={service.title} description={service.description} icon={service.icon} />
                 ))}
               </div>
             </div>
