@@ -1,21 +1,35 @@
+'use client'
+
+import {
+  MapIcon,
+  Cog6ToothIcon,
+  PuzzlePieceIcon,
+  LightBulbIcon,
+  RocketLaunchIcon,
+  PresentationChartBarIcon,
+  ArrowPathIcon,
+  PlayIcon,
+  GlobeAltIcon,
+} from '@heroicons/react/24/outline'
+
 const servicesAiEngineering = [
   {
     title: 'AI Strategy & Readiness',
     description:
       "Before building, you need clarity. We help organisations assess where AI creates real value, what's feasible today, and how to sequence adoption so investment lands where it matters.",
-    icon: 'lineChart',
+    icon: MapIcon,
   },
   {
     title: 'Agentic AI Automation',
     description:
       'We build broader AI transformation programs, from practical automations to reusable toolchains that speed up internal workflows. The goal is measurable throughput gains, not isolated demos.',
-    icon: 'threeBlocks',
+    icon: Cog6ToothIcon,
   },
   {
     title: 'AI Product Integration',
     description:
       'We embed AI directly into your existing products — copilots, document intelligence, chat interfaces — with full observability, guardrails, and handoff to your engineering team.',
-    icon: 'checkSquare',
+    icon: PuzzlePieceIcon,
   },
 ]
 
@@ -24,37 +38,37 @@ const servicesStrategyExecution = [
     title: 'Innovation Conceptualization',
     description:
       "A bold idea that never gets tested is just a risk you're carrying. We translate raw innovation into structured concepts that reduce adoption risk before a single line of code is written.",
-    icon: 'square',
+    icon: LightBulbIcon,
   },
   {
     title: 'Rapid Prototyping',
     description:
       "We compress months into weeks. From validated concept to working prototype — fast enough to show investors, clients, or your own team that it's real.",
-    icon: 'hexagon',
+    icon: RocketLaunchIcon,
   },
   {
     title: 'Data-Driven Insights',
     description:
       'We design decision systems around your operational and product data. From instrumentation to dashboards and forecasting, we turn fragmented signals into clear next actions.',
-    icon: 'dataNetwork',
+    icon: PresentationChartBarIcon,
   },
   {
     title: 'Agile Transformation',
     description:
       "Most teams don't fail because they lack talent. They fail because their processes can't keep up. We guide organizations through the messy, real work of becoming adaptive — from rituals to culture.",
-    icon: 'triangle',
+    icon: ArrowPathIcon,
   },
   {
     title: 'Innovation Project Continuity',
     description:
       'When a funded innovation project proves its value, momentum should not stall. We provide structured handover, operations support, and ongoing technical ownership so outcomes keep delivering.',
-    icon: 'bars',
+    icon: PlayIcon,
   },
   {
     title: 'Digital Sustainable Strategy',
     description:
       'Sustainability is multi-dimensional. Using the SuSAF framework, we help organisations evaluate and design digital initiatives across technical, environmental, economic, and social dimensions — not just green IT.',
-    icon: 'sustainability',
+    icon: GlobeAltIcon,
   },
 ]
 
@@ -71,95 +85,19 @@ const domains = [
   { name: 'Applied Research and Innovation', stat: '10+ Years' },
 ]
 
-function ServiceIcon({ type }: { type: string }) {
-  switch (type) {
-    case 'lineChart':
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-          <path d="M3 14l4-4 3 2 7-7" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M14 5h3v3" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      )
-    case 'threeBlocks':
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" aria-hidden="true">
-          <rect x="3" y="8" width="4" height="9" fill="currentColor" />
-          <rect x="8" y="5" width="4" height="12" fill="currentColor" />
-          <rect x="13" y="10" width="4" height="7" fill="currentColor" />
-        </svg>
-      )
-    case 'checkSquare':
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-          <rect x="3.5" y="3.5" width="13" height="13" rx="1" />
-          <path d="M6 10l2.5 2.5L14 7" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      )
-    case 'triangle':
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-          <path d="M10 3.5 16.5 16.5H3.5L10 3.5Z" strokeLinejoin="round" />
-        </svg>
-      )
-    case 'square':
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" aria-hidden="true">
-          <rect x="3" y="3" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.5" />
-        </svg>
-      )
-    case 'hexagon':
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-          <path d="M10 2.5l6.5 3.75v7.5L10 17.5l-6.5-3.75v-7.5L10 2.5z" strokeLinejoin="round" />
-        </svg>
-      )
-    case 'bars':
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" aria-hidden="true">
-          <path d="M4 5h12M4 10h8M4 15h12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        </svg>
-      )
-    case 'dataNetwork':
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-          <circle cx="5" cy="12" r="2" fill="currentColor" stroke="none" />
-          <circle cx="10" cy="6" r="2" fill="currentColor" stroke="none" />
-          <circle cx="15" cy="13" r="2" fill="currentColor" stroke="none" />
-          <path d="M6.7 10.5 8.6 7.5M11.4 7.5l2.2 4.2M7.2 12.8l5.6 0.4" strokeLinecap="round" />
-        </svg>
-      )
-    case 'sustainability':
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-          <circle cx="10" cy="10" r="6.5" />
-          <path d="M10 6v8" strokeLinecap="round" />
-        </svg>
-      )
-    default:
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" aria-hidden="true">
-          <rect x="3" y="3" width="5" height="5" fill="currentColor" />
-          <rect x="12" y="3" width="5" height="5" fill="currentColor" />
-          <rect x="3" y="12" width="5" height="5" fill="currentColor" />
-          <rect x="12" y="12" width="5" height="5" fill="currentColor" />
-        </svg>
-      )
-  }
-}
-
 function ServiceCard({
   title,
   description,
-  icon,
+  icon: Icon,
 }: {
   title: string
   description: string
-  icon: string
+  icon: React.ComponentType<{ className?: string }>
 }) {
   return (
     <article className="rounded-md border border-neutral-300 bg-[#F5F4F0] p-6">
-      <div className="mb-5 inline-flex h-9 w-9 items-center justify-center rounded-sm border border-neutral-300 bg-white">
-        <ServiceIcon type={icon} />
+      <div className="mb-5">
+        <Icon className="h-10 w-10 text-neutral-900" />
       </div>
       <h2 className="text-xl font-semibold tracking-[-0.02em]">{title}</h2>
       <p className="mt-3 text-sm leading-relaxed text-neutral-700">{description}</p>
@@ -172,15 +110,15 @@ export default function Home() {
     <main className="bg-white text-[#0A0A0A]">
       <header className="absolute inset-x-0 top-0 z-30 border-b border-white/15">
         <div className="mx-auto w-full max-w-[1240px] px-6 py-4 lg:px-10">
-          <div className="flex items-center justify-between gap-4">
-            <a href="#top" className="text-sm font-semibold tracking-tight text-white">
+          <div className="flex items-center justify-between gap-2 md:gap-4">
+            <a href="#top" className="text-xs md:text-sm font-semibold tracking-tight text-white">
               Patkar &amp; Associates
             </a>
-            <div className="rounded-full border border-white/20 px-3 py-1 text-[10px] uppercase tracking-[0.12em] text-neutral-300">
-              🇨🇭 Engineered in Switzerland
+            <div className="flex-shrink-0 rounded-full border border-white/20 px-2 md:px-3 py-1 text-[10px] uppercase tracking-[0.12em] text-neutral-300 whitespace-nowrap">
+              🇨🇭 Switzerland
             </div>
           </div>
-          <nav className="mt-3 flex justify-end gap-5 text-[10px] uppercase tracking-[0.16em] text-neutral-300 md:text-xs lg:gap-7">
+          <nav className="mt-3 flex justify-end gap-3 md:gap-5 text-[10px] uppercase tracking-[0.16em] text-neutral-300 md:text-xs lg:gap-7">
             <a href="#services" className="transition-colors hover:text-white">
               Services
             </a>
@@ -271,8 +209,8 @@ export default function Home() {
       </section>
 
       <section id="about" className="border-t border-neutral-300 bg-white py-20 md:py-24">
-        <div className="mx-auto grid w-full max-w-[1240px] grid-cols-12 gap-8 px-6 lg:px-10">
-          <div className="col-span-12 md:col-span-7">
+        <div className="mx-auto w-full max-w-[1240px] grid grid-cols-1 md:grid-cols-2 gap-8 px-6 lg:px-10">
+          <div>
             <h2 className="max-w-2xl text-4xl font-semibold leading-[1.05] tracking-[-0.03em] md:text-5xl">
               Every innovation project is a leap. We make sure it&apos;s a calculated one.
             </h2>
@@ -282,10 +220,10 @@ export default function Home() {
               the uncertainty isn&apos;t there.
             </p>
           </div>
-          <div className="col-span-12 border-t border-neutral-300 pt-6 md:col-span-5 md:border-l md:border-t-0 md:pl-8 md:pt-0">
+          <div className="border-t border-neutral-300 pt-6 md:border-l md:border-t-0 md:pl-8 md:pt-0">
             <ul className="space-y-4">
               {domains.map((domain) => (
-                <li key={domain.name} className="flex items-baseline justify-between border-b border-neutral-200 pb-3">
+                <li key={domain.name} className="flex flex-col md:flex-row md:items-baseline md:justify-between border-b border-neutral-200 pb-3 gap-2">
                   <span className="text-sm font-medium">{domain.name}</span>
                   <span className="text-xs uppercase tracking-[0.12em] text-neutral-600">{domain.stat}</span>
                 </li>
@@ -296,14 +234,14 @@ export default function Home() {
       </section>
 
       <section id="contact" className="border-t border-white/15 bg-[#0A0A0A] py-20 text-white md:py-24">
-        <div className="mx-auto grid w-full max-w-[1240px] grid-cols-12 gap-10 px-6 lg:px-10">
-          <div className="col-span-12 md:col-span-6">
+        <div className="mx-auto w-full max-w-[1240px] grid grid-cols-1 md:grid-cols-2 gap-10 px-6 lg:px-10">
+          <div>
             <h2 className="text-4xl font-semibold leading-[1] tracking-[-0.03em] md:text-5xl">What&apos;s your challenge?</h2>
             <p className="mt-6 max-w-lg text-sm leading-relaxed text-neutral-400 md:text-base">
               No pitch. No retainer. Just a conversation about your problem.
             </p>
           </div>
-          <form className="col-span-12 space-y-4 md:col-span-6">
+          <form className="space-y-4">
             <label className="block">
               <span className="mb-2 block text-xs uppercase tracking-[0.12em] text-neutral-400">Name</span>
               <input

@@ -1,15 +1,21 @@
 'use client'
 
 interface ServiceItemProps {
-  icon: React.ReactNode
+  colorIndex: number
   title: string
   description: string
 }
 
-function ServiceCard({ icon, title, description }: ServiceItemProps) {
+function ServiceCard({ colorIndex, title, description }: ServiceItemProps) {
+  const colors = [
+    'bg-blue-50 dark:bg-blue-950',
+    'bg-slate-50 dark:bg-slate-900',
+    'bg-amber-50 dark:bg-amber-950',
+  ]
+  
   return (
     <div className="p-6 md:p-8 border border-border hover:border-foreground/30 transition-colors">
-      <div className="mb-4 text-2xl">{icon}</div>
+      <div className={`mb-6 h-12 w-12 rounded ${colors[colorIndex % 3]}`} />
       <h3 className="text-xl md:text-2xl mb-3 text-foreground font-semibold">
         {title}
       </h3>
@@ -22,32 +28,26 @@ function ServiceCard({ icon, title, description }: ServiceItemProps) {
 
 const services = [
   {
-    icon: '→',
     title: 'Agile Transition',
     description: 'Accelerate your digital transformation with proven agile methodologies tailored to your organization.',
   },
   {
-    icon: '◆',
     title: 'Innovation Conceptualization',
     description: 'Turn strategic vision into actionable innovation roadmaps that drive competitive advantage.',
   },
   {
-    icon: '▲',
     title: 'Process Optimization',
     description: 'Streamline operations and maximize efficiency through data-driven process improvements.',
   },
   {
-    icon: '⊕',
     title: 'Technology Stack Review',
     description: 'Evaluate and modernize your tech infrastructure for scalability and performance.',
   },
   {
-    icon: '◇',
     title: 'Organizational Alignment',
     description: 'Ensure teams, tools, and strategies work in perfect harmony toward shared objectives.',
   },
   {
-    icon: '✕',
     title: 'Risk Management',
     description: 'Identify, assess, and mitigate IT risks before they impact your business continuity.',
   },
@@ -70,7 +70,7 @@ export function Services() {
           {services.map((service, index) => (
             <ServiceCard
               key={index}
-              icon={service.icon}
+              colorIndex={index}
               title={service.title}
               description={service.description}
             />
