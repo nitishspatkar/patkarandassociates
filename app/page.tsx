@@ -3,19 +3,16 @@ const servicesAiEngineering = [
     title: 'AI Strategy & Readiness',
     description:
       "Before building, you need clarity. We help organisations assess where AI creates real value, what's feasible today, and how to sequence adoption so investment lands where it matters.",
-    icon: 'lineChart',
   },
   {
     title: 'Agentic AI Automation',
     description:
       'We build broader AI transformation programs, from practical automations to reusable toolchains that speed up internal workflows. The goal is measurable throughput gains, not isolated demos.',
-    icon: 'threeBlocks',
   },
   {
     title: 'AI Product Integration',
     description:
       'We embed AI directly into your existing products — copilots, document intelligence, chat interfaces — with full observability, guardrails, and handoff to your engineering team.',
-    icon: 'checkSquare',
   },
 ]
 
@@ -24,37 +21,31 @@ const servicesStrategyExecution = [
     title: 'Innovation Conceptualization',
     description:
       "A bold idea that never gets tested is just a risk you're carrying. We translate raw innovation into structured concepts that reduce adoption risk before a single line of code is written.",
-    icon: 'square',
   },
   {
     title: 'Rapid Prototyping',
     description:
       "We compress months into weeks. From validated concept to working prototype — fast enough to show investors, clients, or your own team that it's real.",
-    icon: 'hexagon',
   },
   {
     title: 'Data-Driven Insights',
     description:
       'We design decision systems around your operational and product data. From instrumentation to dashboards and forecasting, we turn fragmented signals into clear next actions.',
-    icon: 'dataNetwork',
   },
   {
     title: 'Agile Transformation',
     description:
       "Most teams don't fail because they lack talent. They fail because their processes can't keep up. We guide organizations through the messy, real work of becoming adaptive — from rituals to culture.",
-    icon: 'triangle',
   },
   {
     title: 'Innovation Project Continuity',
     description:
       'When a funded innovation project proves its value, momentum should not stall. We provide structured handover, operations support, and ongoing technical ownership so outcomes keep delivering.',
-    icon: 'bars',
   },
   {
     title: 'Digital Sustainable Strategy',
     description:
       'Sustainability is multi-dimensional. Using the SuSAF framework, we help organisations evaluate and design digital initiatives across technical, environmental, economic, and social dimensions — not just green IT.',
-    icon: 'sustainability',
   },
 ]
 
@@ -71,96 +62,24 @@ const domains = [
   { name: 'Applied Research and Innovation', stat: '10+ Years' },
 ]
 
-function ServiceIcon({ type }: { type: string }) {
-  switch (type) {
-    case 'lineChart':
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-          <path d="M3 14l4-4 3 2 7-7" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M14 5h3v3" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      )
-    case 'threeBlocks':
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" aria-hidden="true">
-          <rect x="3" y="8" width="4" height="9" fill="currentColor" />
-          <rect x="8" y="5" width="4" height="12" fill="currentColor" />
-          <rect x="13" y="10" width="4" height="7" fill="currentColor" />
-        </svg>
-      )
-    case 'checkSquare':
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-          <rect x="3.5" y="3.5" width="13" height="13" rx="1" />
-          <path d="M6 10l2.5 2.5L14 7" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      )
-    case 'triangle':
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-          <path d="M10 3.5 16.5 16.5H3.5L10 3.5Z" strokeLinejoin="round" />
-        </svg>
-      )
-    case 'square':
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" aria-hidden="true">
-          <rect x="3" y="3" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.5" />
-        </svg>
-      )
-    case 'hexagon':
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-          <path d="M10 2.5l6.5 3.75v7.5L10 17.5l-6.5-3.75v-7.5L10 2.5z" strokeLinejoin="round" />
-        </svg>
-      )
-    case 'bars':
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" aria-hidden="true">
-          <path d="M4 5h12M4 10h8M4 15h12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        </svg>
-      )
-    case 'dataNetwork':
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-          <circle cx="5" cy="12" r="2" fill="currentColor" stroke="none" />
-          <circle cx="10" cy="6" r="2" fill="currentColor" stroke="none" />
-          <circle cx="15" cy="13" r="2" fill="currentColor" stroke="none" />
-          <path d="M6.7 10.5 8.6 7.5M11.4 7.5l2.2 4.2M7.2 12.8l5.6 0.4" strokeLinecap="round" />
-        </svg>
-      )
-    case 'sustainability':
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-          <circle cx="10" cy="10" r="6.5" />
-          <path d="M10 6v8" strokeLinecap="round" />
-        </svg>
-      )
-    default:
-      return (
-        <svg className="h-5 w-5 text-neutral-900" viewBox="0 0 20 20" aria-hidden="true">
-          <rect x="3" y="3" width="5" height="5" fill="currentColor" />
-          <rect x="12" y="3" width="5" height="5" fill="currentColor" />
-          <rect x="3" y="12" width="5" height="5" fill="currentColor" />
-          <rect x="12" y="12" width="5" height="5" fill="currentColor" />
-        </svg>
-      )
-  }
-}
-
 function ServiceCard({
   title,
   description,
-  icon,
+  colorIndex,
 }: {
   title: string
   description: string
-  icon: string
+  colorIndex: number
 }) {
+  const colors = [
+    'bg-blue-100 dark:bg-blue-900',
+    'bg-slate-100 dark:bg-slate-800',
+    'bg-amber-100 dark:bg-amber-900',
+  ]
+  
   return (
     <article className="rounded-md border border-neutral-300 bg-[#F5F4F0] p-6">
-      <div className="mb-5 inline-flex h-9 w-9 items-center justify-center rounded-sm border border-neutral-300 bg-white">
-        <ServiceIcon type={icon} />
-      </div>
+      <div className={`mb-5 h-8 w-8 rounded ${colors[colorIndex % 3]}`} />
       <h2 className="text-xl font-semibold tracking-[-0.02em]">{title}</h2>
       <p className="mt-3 text-sm leading-relaxed text-neutral-700">{description}</p>
     </article>
@@ -231,8 +150,8 @@ export default function Home() {
             <div>
               <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-600">AI Engineering</p>
               <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-                {servicesAiEngineering.map((service) => (
-                  <ServiceCard key={service.title} title={service.title} description={service.description} icon={service.icon} />
+                {servicesAiEngineering.map((service, index) => (
+                  <ServiceCard key={service.title} title={service.title} description={service.description} colorIndex={index} />
                 ))}
               </div>
             </div>
@@ -240,8 +159,8 @@ export default function Home() {
             <div>
               <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-600">Strategy &amp; Execution</p>
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-                {servicesStrategyExecution.map((service) => (
-                  <ServiceCard key={service.title} title={service.title} description={service.description} icon={service.icon} />
+                {servicesStrategyExecution.map((service, index) => (
+                  <ServiceCard key={service.title} title={service.title} description={service.description} colorIndex={index} />
                 ))}
               </div>
             </div>
